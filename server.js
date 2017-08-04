@@ -50,6 +50,12 @@ app.get('/about', (request, response) => {
     });
 });
 
+app.get('/projects', (request, response) => {
+    response.render('projects.hbs', {
+        header: 'The Projects Page'
+    });
+});
+
 app.get('/bad', (request, response) => {
     response.send({
         errorMessage: 'Error handling request'
